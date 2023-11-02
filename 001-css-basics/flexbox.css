@@ -1,0 +1,31 @@
+html {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.flex-container {
+    height: 600px;
+    display: flex;
+    background: lightpink;
+    padding: 10px;
+
+    flex-flow: row;
+
+    align-items: flex-start;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+}
+
+.flex-item {
+    background: orange;
+    padding: 20px;
+}
+
+.flex-item:first-child {
+    background: red;
+    flex-basis: 100px;
+}
+
+.flex-item:last-child {
+    background: green;
+    flex-basis: 300px;
+}
