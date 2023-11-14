@@ -1,3 +1,19 @@
+@font-face {
+    font-family: lato;
+    src: url(fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: lato;
+    src: url(fonts/Lato-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: lato;
+    src: url(fonts/Lato-Black.ttf);
+    font-weight: 900;
+}
+
 html,
 body {
     margin: 0;
@@ -6,6 +22,7 @@ body {
 
 html * {
     box-sizing: border-box;
+    font-family: lato;
 }
 
 :root {
@@ -13,6 +30,15 @@ html * {
     --grey: #969696;
     --light-grey: #dddddd;
     --red: #e74149;
+    --h-space: 30px;
+}
+h1 {
+    font-weight: 900;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 #main-header {
@@ -25,6 +51,11 @@ html * {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+}
+
+.h-spacing {
+    padding-left: var(--h-space);
+    padding-right: var(--h-space);
 }
 
 /* nur .container Klassen innerhalb des #main-header */
@@ -49,10 +80,82 @@ button.cta {
     font-size: 18px;
     border: none;
     border-radius: 12px;
+    font-weight: normal;
 }
+
+.inner-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+
+.container {
+    width: 100%;
+    /* DEV: farben zur darstellung der Container  */
+    background-color: rgba(255, 155, 0, 0.25);
+}
+
+#main-footer {
+    background-color: var(--light-grey);
+}
+
+#footer-logo {
+    display: none;
+}
+
+#copyright {
+    font-size: 0.8em;
+    color: var(--grey);
+    text-align: center;
+}
+
+a {
+    color: var(--red);
+}
+
+#main-footer a {
+    color: inherit;
+}
+
+#main-footer nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+#main-footer nav ul li {
+    flex-basis: 50%;
+}
+
+/* Teaser Element */
 
 @media (min-width: 768px) {
     /* CSS Code für Viewports größer/gleich 768px */
+
+    section .container {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    #main-footer nav {
+        flex-basis: 50%;
+    }
+    #footer-logo {
+        display: block;
+        filter: grayscale(1);
+        flex-basis: 50%;
+        text-align: right;
+    }
+
+    #main-footer .inner-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #copyright {
+        flex-basis: 100%;
+        text-align: right;
+        margin-top: -1em;
+    }
 }
 
 @media (min-width: 1200px) {
