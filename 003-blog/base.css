@@ -51,6 +51,11 @@ img {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+    margin-top: 80px;
+}
+#main-header .container:first-child {
+    position: relative;
+    top: -60px;
 }
 
 .h-spacing {
@@ -89,14 +94,23 @@ button.cta {
     max-width: 1200px;
 }
 
+#main-header .row {
+    background: white;
+    display: flex;
+}
+
 .container {
     width: 100%;
-    /* DEV: farben zur darstellung der Container  */
-    background-color: rgba(255, 155, 0, 0.25);
 }
 
 #main-footer {
     background-color: var(--light-grey);
+    margin-top: 50px;
+}
+
+#main-footer .inner-wrapper {
+    padding-top: var(--h-space);
+    padding-bottom: 50px;
 }
 
 #footer-logo {
@@ -107,10 +121,17 @@ button.cta {
     font-size: 0.8em;
     color: var(--grey);
     text-align: center;
+    margin-top: 50px;
+    padding-left: var(--h-space);
+    padding-right: var(--h-space);
 }
 
 a {
     color: var(--red);
+}
+
+.teaser-item a {
+    text-decoration: none;
 }
 
 #main-footer a {
@@ -120,9 +141,61 @@ a {
 #main-footer nav ul {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: var(--h-space);
+    padding-right: var(--h-space);
 }
 #main-footer nav ul li {
     flex-basis: 50%;
+    margin-bottom: 1em;
+    padding-left: 0.5em;
+    list-style: none;
+}
+
+#main-footer nav ul li::marker {
+    content: "\2BC8";
+    color: var(--red);
+}
+
+#main-footer nav ul li a {
+    text-decoration: none;
+}
+
+.teaser-item a::after {
+    content: "\2BC8";
+}
+
+.teaser-item a {
+    transition: all 0.5s ease;
+}
+
+.teaser-item a:hover {
+    background-color: var(--red);
+    color: white !important;
+    padding: 5px 0;
+}
+
+.teaser-item a:hover::before {
+    content: "";
+    display: block;
+    position: relative;
+    bottom: -1.5em;
+    width: calc(100% - 1.25em);
+    height: 1px;
+    background: var(--red);
+}
+
+.teaser-item a:active {
+    color: pink;
+}
+
+.teaser-item a:visited {
+    color: black;
+}
+
+.teaser-item a:focus {
+    outline: 1px dashed blue;
 }
 
 /* Teaser Element */
