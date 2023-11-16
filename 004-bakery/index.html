@@ -9,7 +9,7 @@
     <body>
         <div class="wrapper">
             <header id="main-header">
-                <div class="row h-space">
+                <div class="row h-space inner-wrapper">
                     <div id="logo">
                         <a href="index.html">
                             <img
@@ -28,17 +28,44 @@
 
                 <div class="row">
                     <div id="hero">
-                        <img src="https://via.placeholder.com/320x240" alt="" />
+                        <!-- Adaptive / Responsive Images -->
+                        <picture>
+                            <source
+                                media="(min-width: 420px)"
+                                srcset="
+                                    img/content/pexels-hasan-berkant-12259559_w768.jpg
+                                "
+                            />
+                            <source
+                                media="(min-width: 1300px)"
+                                srcset="
+                                    img/content/pexels-hasan-berkant-12259559_w1920.jpg
+                                "
+                            />
+
+                            <img
+                                src="img/content/pexels-hasan-berkant-12259559_w200.jpg"
+                                alt=""
+                            />
+                        </picture>
                     </div>
+                </div>
+
+                <div class="row inner-wrapper">
+                    <img
+                        id="siegel"
+                        src="img/2000px-Guetesiegel_anz.svg.png"
+                        alt=""
+                    />
                 </div>
             </header>
 
             <main>
                 <section class="sortiment">
-                    <header>
+                    <header class="inner-wrapper">
                         <h1>Unser Sortiment</h1>
                     </header>
-                    <div class="items">
+                    <div class="items inner-wrapper">
                         <article>
                             <img
                                 src="https://via.placeholder.com/256x256"
@@ -64,10 +91,59 @@
                             />
                         </article>
                     </div>
+                    <div class="text inner-wrapper">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Inventore dolorem totam sapiente maxime
+                            cupiditate quidem voluptatem excepturi saepe magni
+                            id. Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Quasi vel ab placeat sunt dolores
+                            numquam voluptatibus aperiam, quia totam
+                            exercitationem reprehenderit assumenda veniam. Vel
+                            iste reiciendis sed! Doloremque, numquam nemo. Lorem
+                            ipsum dolor sit, amet consectetur adipisicing elit.
+                            Rem, reiciendis, sit molestiae ea odio dolorum fugit
+                            deserunt esse cumque vero ipsam aspernatur ab totam,
+                            pariatur harum quas cum voluptates reprehenderit.
+                        </p>
+                        <a class="button" href="sortiment.html"
+                            >Bestellung aufgeben</a
+                        >
+                    </div>
                 </section>
             </main>
 
-            <footer></footer>
+            <footer id="main-footer">
+                <div class="inner-wrapper">
+                    <address>
+                        <span>Bakery GmbH</span>
+                        <span>Salzburgerstraße 55</span>
+                        <span>5620 Schwarzach</span>
+                        <span>Österreich</span>
+                        <br />
+                        <span>Tel. +43 6415 422 42 80</span>
+                        <span>E-Mail: bakery@example.com</span>
+                    </address>
+
+                    <nav>
+                        <ul>
+                            <li><a href="#">Über Unser</a></li>
+                            <li><a href="team.html">Unser Team</a></li>
+                            <li><a href="galerie.html">Galerie</a></li>
+                            <li><a href="kontakt.html">Kontakt</a></li>
+                            <li><a href="impressum.html">Impressum</a></li>
+                            <li>
+                                <a href="datenschutz.html"
+                                    >Datenschutz &amp; Cookies</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="end">
+                    <p>&copy; 2023 by JWE Wifi Salzburg</p>
+                </div>
+            </footer>
         </div>
     </body>
 </html>

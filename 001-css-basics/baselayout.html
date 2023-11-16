@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Base Layout</title>
+        <style>
+            @font-face {
+                font-family: josi;
+                src: url(../004-bakery/fonts/josefin-sans-v20-latin-regular.woff);
+            }
+
+            @font-face {
+                font-family: josi;
+                src: url(../004-bakery/fonts/josefin-sans-v20-latin-300.woff);
+                font-weight: 300;
+            }
+
+            @font-face {
+                font-family: josi;
+                src: url(../004-bakery/fonts/josefin-sans-v20-latin-700.woff);
+                font-weight: 700;
+            }
+
+            body {
+                font-family: josi;
+            }
+
+            .wrapper {
+                background: yellow;
+            }
+
+            header {
+                background: lightblue;
+            }
+
+            main {
+                background: lightcoral;
+            }
+
+            footer {
+                background: lightgreen;
+            }
+
+            .flex-container {
+                display: flex;
+                flex-flow: row;
+                justify-content: space-between;
+                align-items: center;
+                background: greenyellow;
+            }
+            #logo {
+                background: orange;
+            }
+            #logo img {
+                width: 150px;
+            }
+            #nav {
+                background: blueviolet;
+            }
+            img {
+                max-width: 100%;
+            }
+
+            #hero {
+                position: relative;
+            }
+            #hero-image {
+                display: block;
+            }
+
+            #siegel {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                right: 20px;
+                bottom: -30px;
+            }
+
+            h2 {
+                font-size: 40px;
+                text-transform: uppercase;
+            }
+
+            #main-footer nav {
+                background-color: aquamarine;
+            }
+
+            #main-footer ul {
+                list-style: none;
+            }
+
+            #main-footer img {
+                border: 1px solid red;
+            }
+
+            #end {
+                background: grey;
+                color: white;
+                text-align: center;
+                padding: 25px;
+            }
+
+            /* max-width und mitte */
+
+            .inner-wrapper {
+                max-width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            @media screen and (min-width: 768px) {
+                #main-footer .flexbox {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header id="main-header">
+                <!-- logo navigtation row BEGIN -->
+                <div class="flex-container inner-wrapper">
+                    <div id="logo">
+                        <img
+                            src="../004-bakery/img/Logo-placeholder.png"
+                            alt=""
+                        />
+                    </div>
+                    <nav id="nav">
+                        <img src="../004-bakery/img/nav.svg" alt="" />
+                    </nav>
+                </div>
+                <!-- logo navigtation row END -->
+
+                <!-- hero image BEGIN -->
+                <div id="hero" class="inner-wrapper">
+                    <img
+                        id="hero-image"
+                        src="../004-bakery/img/content/pexels-hasan-berkant-12259559_w1920.jpg"
+                        alt=""
+                    />
+                    <img
+                        id="siegel"
+                        src="../004-bakery/img/qualitaetssiegel-goldene-eichel_300.png"
+                        alt=""
+                    />
+                </div>
+                <!-- hero image END -->
+            </header>
+
+            <main>
+                <section class="content-element-limited-width inner-wrapper">
+                    <h2>Headline 2</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Natus necessitatibus delectus qui dolore autem
+                        dicta hic rerum odio corrupti alias! Lorem ipsum dolor
+                        sit amet consectetur adipisicing elit. Esse possimus
+                        provident dolor illo dicta nulla est, dolores atque
+                        magni odio eius quis autem necessitatibus sit ad totam
+                        reiciendis sequi nemo? Dolor nisi error, aliquam
+                        similique iure natus hic, fugiat dolorem ipsam beatae
+                        explicabo quo rem, quae totam deleniti vero! Deserunt
+                        corporis expedita, alias fuga iste sed! Officiis modi
+                        quod iure optio sequi molestiae accusantium. Obcaecati,
+                        impedit officiis! Iusto, libero ea? Quaerat minima,
+                        ipsam perspiciatis optio facilis, modi, alias amet quia
+                        sit error quidem ea accusantium necessitatibus quod quas
+                        consequatur? Dolor unde doloremque accusamus cumque
+                        dolores, adipisci mollitia quis consectetur repellendus
+                        quo voluptatibus, ipsum quos molestiae vitae dolorum?
+                        Quas ducimus quam dicta earum provident sunt, ullam
+                        eligendi, possimus sit ea animi ipsam in tenetur!
+                        Voluptate et nisi dolorem, non ullam quo corporis
+                        dignissimos a consequuntur modi omnis tempore
+                        aspernatur, asperiores repudiandae ipsam recusandae?
+                        Quam reprehenderit beatae modi sit, ducimus debitis
+                        laboriosam alias atque itaque aut soluta molestiae
+                        asperiores sequi quasi voluptatum dolorem totam
+                        voluptate ipsam error? Dolores, cupiditate? Fugiat odit
+                        asperiores incidunt sunt voluptates? Eum itaque saepe
+                        atque minima consectetur distinctio a odit voluptatem
+                        repudiandae! Quisquam eligendi accusantium reprehenderit
+                        possimus animi est porro eveniet ratione molestias.
+                        Animi nihil ea dignissimos laudantium impedit natus,
+                        quam tempora. Numquam incidunt quod dolor velit
+                        voluptate esse eaque aliquid perspiciatis voluptatem rem
+                        deleniti sit ab similique quasi temporibus tenetur odit,
+                        placeat consectetur nobis accusamus aut fuga. Quasi,
+                        cumque autem id doloremque dolores nemo excepturi in aut
+                        ipsa, facere ut quos libero amet nesciunt ad soluta?
+                        Enim nulla magni voluptate minima sed, tempore vel ipsum
+                        at dolor expedita recusandae ratione animi consequuntur
+                        aperiam neque ducimus error et? Veniam doloribus ullam
+                        alias, reprehenderit animi sed voluptatum corrupti
+                        exercitationem sapiente tempore! Ut, labore quibusdam.
+                        Totam dolorum voluptatibus, non, repellat corporis
+                        facilis molestiae ducimus reprehenderit dignissimos illo
+                        delectus tempora exercitationem odit magnam reiciendis
+                        architecto veritatis repellendus sequi possimus
+                        similique saepe esse eligendi. Praesentium autem facilis
+                        quia sapiente voluptate veniam voluptatum. Corporis
+                        similique dicta minima quas tenetur dolorem ratione
+                        labore assumenda, vero ab aliquam sapiente earum odio
+                        unde tempora voluptatem optio totam minus. Aliquam
+                        ratione aperiam vero in corporis placeat inventore ea
+                        atque nam accusamus explicabo fugiat obcaecati sint
+                        aspernatur provident, consequuntur, delectus sit
+                        molestiae quod. Asperiores, nostrum quam dicta nihil
+                        delectus dolore perspiciatis. Minima aliquid qui officia
+                        sequi voluptatum tenetur inventore impedit, magni
+                        quibusdam, doloremque, eveniet repellendus? Alias fugiat
+                        facilis veniam eaque ipsum, repellat ullam perspiciatis
+                        eius velit, illum sequi.
+                    </p>
+
+                    <h2>Headline 2</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Tenetur delectus deserunt quam exercitationem tempora,
+                        iure ullam quidem animi eaque nam.
+                    </p>
+
+                    <h2>Headline 2</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Natus necessitatibus delectus qui dolore autem
+                        dicta hic rerum odio corrupti alias!
+                    </p>
+
+                    <h2>Headline 2</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Tenetur delectus deserunt quam exercitationem tempora,
+                        iure ullam quidem animi eaque nam.
+                    </p>
+
+                    <h2>Headline 2</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Natus necessitatibus delectus qui dolore autem
+                        dicta hic rerum odio corrupti alias!
+                    </p>
+
+                    <h2>Headline 2</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Tenetur delectus deserunt quam exercitationem tempora,
+                        iure ullam quidem animi eaque nam.
+                    </p>
+                </section>
+
+                <section class="content-element-full-width">
+                    <img
+                        src="../004-bakery/img/content/pexels-klaus-nielsen-6287295.jpg"
+                        alt=""
+                        style="width: 100%; height: 200px; object-fit: cover"
+                    />
+                </section>
+            </main>
+
+            <footer id="main-footer">
+                <div class="flexbox inner-wrapper">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Datenschutz</a></li>
+                            <li><a href="#">Impressum</a></li>
+                            <li><a href="#">AGB</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">Nutzungsbedingungen</a></li>
+                        </ul>
+                    </nav>
+
+                    <img src="../003-blog/img/logo.svg" alt="" />
+                </div>
+
+                <div id="end">
+                    <div class="inner-wrapper">
+                        &copy; 2023 tba.... | Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Similique cupiditate
+                        officia corrupti impedit laboriosam asperiores ducimus,
+                        expedita magni optio molestias at minima dolorum et.
+                        Explicabo quo accusantium iusto. Vel voluptas corrupti
+                        similique, itaque voluptatibus ex amet. Hic ullam eaque
+                        perferendis! Dolore officiis rem tenetur voluptatem?
+                        Autem reiciendis similique minus iste?
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

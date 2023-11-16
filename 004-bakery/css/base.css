@@ -1,7 +1,11 @@
 :root {
     --h-space: 30px;
+    --lightgrey: #cccccc;
+    --gold: #c39065;
+    --grey: #707070;
 }
 
+/* Schriften */
 @font-face {
     font-family: josefin;
     src: url(../fonts/josefin-sans-v20-latin-300.woff2);
@@ -18,6 +22,14 @@
     font-weight: 700;
 }
 
+h1 {
+    font-size: 25px;
+    font-weight: 300;
+    color: var(--grey);
+    text-align: center;
+    margin: 3rem 0 3rem;
+}
+
 html,
 body {
     box-sizing: border-box;
@@ -31,7 +43,7 @@ img {
 }
 
 #main-header {
-    background: silver;
+    background: white;
 }
 
 #main-header .row:nth-child(1) {
@@ -49,6 +61,9 @@ img {
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
+    padding-left: var(--h-space);
+    padding-right: var(--h-space);
+    position: relative;
 }
 
 #logo {
@@ -60,4 +75,131 @@ img {
 
 #hero img {
     width: 100%;
+}
+
+#siegel {
+    display: inline-block;
+    width: 10rem;
+    height: auto;
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+#main-footer {
+    background-color: var(--gold);
+    color: white;
+}
+#main-footer a {
+    text-decoration: none;
+}
+
+#main-footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-top: var(--h-space);
+    padding-bottom: var(--h-space);
+}
+
+#main-footer nav {
+    text-align: center;
+}
+
+#main-footer ul li {
+    margin-bottom: 1em;
+}
+
+#end {
+    background: var(--grey);
+    font-weight: 300;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: var(--h-space);
+}
+
+/* Buttons, Links & Co. */
+a {
+    color: inherit;
+    transition: all 0.3s ease;
+}
+a.button {
+    display: inline-block;
+    padding: 0.5em 1.8em;
+    background: white;
+    border: 1px solid black;
+    color: inherit;
+    /* "inherit" selbe Farbe wie übergeordnetes Element vorgibt */
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--lightgrey);
+}
+
+/* Content Elemente */
+section.sortiment {
+    margin-bottom: 3rem;
+}
+section.sortiment .items {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+section.sortiment .text {
+    text-align: center;
+    color: var(--lightgrey);
+}
+
+#main-footer address {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    #main-header img {
+        max-height: 70vh;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    section.sortiment .items {
+        flex-flow: row;
+    }
+
+    #main-footer .inner-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #main-footer address {
+        display: block;
+        font-style: normal;
+        padding-top: var(--h-space);
+    }
+
+    #main-footer address span {
+        margin-bottom: 1em;
+        display: block;
+    }
+
+    #main-footer ul li {
+        text-align: right;
+    }
+
+    #main-footer a:hover {
+        text-decoration: underline;
+    }
+
+    a.button {
+        color: var(--gold);
+        border: 2px solid var(--gold);
+    }
+
+    h1 {
+        font-size: 40px;
+        text-transform: uppercase;
+    }
+}
+
+@media (min-width: 1200px) {
 }
