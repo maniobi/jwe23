@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Formulare in HTML</title>
+    </head>
+    <body>
+        <!-- 
+
+
+        textfeld                (input)         einzeilige Texteingabe
+
+        textfeld                (textarea)      
+        optionsfeld             (checkbox)      mehrfachauswahl
+        optionsfeld             (radio)         einfachauswahl
+        optionsfeld             (select)        einfachauswahl, oder mehrfachauswahl
+
+        button                  (submit)        abschicken des forms
+        button                  (reset)         zurücksetzen aller felder
+        button                  (button)        unbestimmter button
+
+
+     -->
+
+        <h2>Suchformular mit Google</h2>
+
+        <form action="https://google.com/search">
+            <input type="text" name="q" id="searchTerm" />
+            <button type="submit">Suche auf Google</button>
+        </form>
+
+        <hr />
+
+        <h2>Login Form</h2>
+
+        <form action="https://obinet.at" method="post">
+            <input type="text" name="username" id="username" />
+            <input type="password" name="password" id="password" />
+            <button type="submit">Login</button>
+        </form>
+    </body>
+</html>

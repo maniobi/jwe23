@@ -5,6 +5,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Bakery</title>
         <link rel="stylesheet" href="css/base.css" />
+
+        <style>
+            .member {
+                margin-bottom: 50px;
+            }
+            @media (min-width: 768px) {
+                .member {
+                    display: flex;
+                    flex-flow: row;
+                    justify-content: space-around;
+                    gap: 30px;
+                    padding: var(--h-space);
+                }
+                .member:nth-child(2n) {
+                    flex-flow: row-reverse;
+                }
+                .member img {
+                    flex-basis: 30%;
+                    border-radius: 50%;
+                    aspect-ratio: 1 / 1;
+                    object-fit: cover;
+                    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+                }
+                .member p {
+                    align-self: center;
+                    text-align: right;
+                    flex-basis: 30%;
+                }
+                .member:nth-child(2n) p {
+                    text-align: left;
+                }
+            }
+        </style>
     </head>
     <body>
         <div class="wrapper">
@@ -20,7 +53,6 @@
                     </div>
 
                     <nav>
-
                         <ul id="desktop-menu">
                             <li><a href="#">Über uns</a></li>
                             <li><a href="team.html">Unser Team</a></li>
@@ -69,54 +101,46 @@
             </header>
 
             <main>
-                <section class="sortiment">
+                <section class="team">
                     <header class="inner-wrapper">
-                        <h1>Unser Sortiment</h1>
+                        <h1>Unser Team</h1>
                     </header>
-                    <div class="items inner-wrapper">
-                        <article>
+
+                    <div class="members inner-wrapper">
+                        <div class="member">
+                            <!-- Flex Container-->
+                            <p>
+                                Alexandra Schiffer<br />
+                                <small> CEO, Founder </small>
+                            </p>
                             <img
-                                src="https://via.placeholder.com/256x256"
-                                alt=""
+                                src="img/content/team/pexels-anna-shvets-3746276.jpg"
+                                alt="Name des Team-Mitglieds"
                             />
-                        </article>
-                        <article>
+                        </div>
+
+                        <div class="member">
+                            <p>
+                                Sophie Huber<br />
+                                <small> Head of Sweets </small>
+                            </p>
                             <img
-                                src="https://via.placeholder.com/256x256"
-                                alt=""
+                                src="img/content/team/pexels-david-geib-3268529.jpg"
+                                alt="Name des Team-Mitglieds"
                             />
-                        </article>
-                        <article>
+                        </div>
+
+                        <div class="member">
+                            <!-- Flex Container-->
+                            <p>
+                                Erika Neumann<br />
+                                <small> Logistik </small>
+                            </p>
                             <img
-                                src="https://via.placeholder.com/256x256"
-                                alt=""
+                                src="img/content/team/pexels-karley-saagi-4068072.jpg"
+                                alt="Name des Team-Mitglieds"
                             />
-                        </article>
-                        <article>
-                            <img
-                                src="https://via.placeholder.com/256x256"
-                                alt=""
-                            />
-                        </article>
-                    </div>
-                    <div class="text inner-wrapper">
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing
-                            elit. Inventore dolorem totam sapiente maxime
-                            cupiditate quidem voluptatem excepturi saepe magni
-                            id. Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Quasi vel ab placeat sunt dolores
-                            numquam voluptatibus aperiam, quia totam
-                            exercitationem reprehenderit assumenda veniam. Vel
-                            iste reiciendis sed! Doloremque, numquam nemo. Lorem
-                            ipsum dolor sit, amet consectetur adipisicing elit.
-                            Rem, reiciendis, sit molestiae ea odio dolorum fugit
-                            deserunt esse cumque vero ipsam aspernatur ab totam,
-                            pariatur harum quas cum voluptates reprehenderit.
-                        </p>
-                        <a class="button" href="sortiment.html"
-                            >Bestellung aufgeben</a
-                        >
+                        </div>
                     </div>
                 </section>
             </main>

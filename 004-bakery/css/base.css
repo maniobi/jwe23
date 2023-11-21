@@ -40,6 +40,7 @@ body {
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 #main-header {
@@ -64,6 +65,10 @@ img {
     padding-left: var(--h-space);
     padding-right: var(--h-space);
     position: relative;
+}
+
+#desktop-menu {
+    display: none;
 }
 
 #logo {
@@ -198,6 +203,26 @@ section.sortiment .text {
     h1 {
         font-size: 40px;
         text-transform: uppercase;
+    }
+
+    /* Ein / Ausblenden des Desktop-/Burger-menus */
+
+    #desktop-menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 10px;
+        font-weight: bold;
+    }
+
+    #desktop-menu a {
+        color: var(--grey);
+        text-decoration: none;
+    }
+
+    #burger {
+        display: none;
     }
 }
 
