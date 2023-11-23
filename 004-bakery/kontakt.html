@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bakery</title>
+        <link rel="stylesheet" href="css/base.css" />
+        <style>
+            form .row {
+                margin-bottom: 30px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="date"],
+            textarea,
+            select {
+                width: 100%;
+                border: 1px solid var(--gold);
+                padding: 0.5em;
+            }
+            input[type="submit"] {
+                background: var(--gold);
+                border: none;
+                font-size: 1.1rem;
+                font-family: josefin;
+                font-weight: 300;
+                text-transform: uppercase;
+                color: white;
+                padding: 0.5em;
+            }
+
+            label {
+                font-weight: 700;
+                color: var(--grey);
+            }
+
+            @media (min-width: 768px) {
+                .kontakt .flexbox {
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header id="main-header">
+                <div class="row h-space inner-wrapper">
+                    <div id="logo">
+                        <a href="index.html">
+                            <img
+                                src="img/Logo-placeholder.png"
+                                alt="Logo Bakery"
+                            />
+                        </a>
+                    </div>
+
+                    <nav>
+                        <ul id="desktop-menu">
+                            <li><a href="#">Über uns</a></li>
+                            <li><a href="team.html">Unser Team</a></li>
+                            <li><a href="#">Galerie</a></li>
+                            <li><a href="#">Kontakt</a></li>
+                        </ul>
+
+                        <a href="#" id="burger">
+                            <img src="img/nav.svg" alt="" />
+                        </a>
+                    </nav>
+                </div>
+
+                <div class="row">
+                    <div id="hero">
+                        <!-- Adaptive / Responsive Images -->
+                        <picture>
+                            <source
+                                media="(min-width: 420px)"
+                                srcset="
+                                    img/content/pexels-hasan-berkant-12259559_w768.jpg
+                                "
+                            />
+                            <source
+                                media="(min-width: 1300px)"
+                                srcset="
+                                    img/content/pexels-hasan-berkant-12259559_w1920.jpg
+                                "
+                            />
+
+                            <img
+                                src="img/content/pexels-hasan-berkant-12259559_w200.jpg"
+                                alt=""
+                            />
+                        </picture>
+                    </div>
+                </div>
+
+                <div class="row inner-wrapper">
+                    <img
+                        id="siegel"
+                        src="img/2000px-Guetesiegel_anz.svg.png"
+                        alt=""
+                    />
+                </div>
+            </header>
+
+            <main>
+                <section class="kontakt">
+                    <header class="inner-wrapper">
+                        <h1>Bestellen Sie bei uns</h1>
+                    </header>
+
+                    <div class="inner-wrapper flexbox">
+                        <form
+                            action="https://jwe.obinet.at/bakery_order.php"
+                            method="post"
+                        >
+                            <input type="hidden" name="key" value="wifi2023" />
+                            <input
+                                type="hidden"
+                                name="toMail"
+                                value="mo@obinet.at"
+                            />
+                            <div class="row">
+                                <!-- 
+                                    Input: Radio 
+
+                                    name="" ist immer gleich
+                                    id="" je nach Auswahlmöglichkeit
+
+                                    <label for="{id der Auswahlmöglichkeit}"></label>
+                                -->
+                                <input
+                                    type="radio"
+                                    name="salutation"
+                                    id="salutation_herr"
+                                    required
+                                />
+
+                                <label for="salutation_herr">Herr</label>
+
+                                <input
+                                    type="radio"
+                                    name="salutation"
+                                    id="salutation_frau"
+                                    required
+                                />
+                                <label for="salutation_frau">Frau</label>
+
+                                <input
+                                    type="radio"
+                                    name="salutation"
+                                    id="salutation_firma"
+                                    required
+                                />
+                                <label for="salutation_firma">Firma</label>
+                            </div>
+
+                            <div class="row">
+                                <label for="name">Name</label><br />
+                                <input
+                                    name="name"
+                                    id="name"
+                                    type="text"
+                                    placeholder="Geben Sie bitte Ihren Namen ein"
+                                    required
+                                    autocomplete="off"
+                                />
+                            </div>
+
+                            <div class="row">
+                                <label for="email">E-Mail</label><br />
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Geben Sie bitte Ihre E-Mail Adresse ein"
+                                />
+                            </div>
+
+                            <div class="row">
+                                <label for="subject">Betreff</label><br />
+                                <input
+                                    type="text"
+                                    name="subject"
+                                    id="subject"
+                                    placeholder="Für welchen Anlass ist die Bestellung?"
+                                />
+                            </div>
+
+                            <div class="row">
+                                <label for="delivery_date"
+                                    >Wunschlieferdatum</label
+                                ><br />
+                                <input
+                                    type="date"
+                                    name="delivery_date"
+                                    id="delivery_date"
+                                />
+                            </div>
+
+                            <div class="row">
+                                <label for="delivery_date2"
+                                    >2. Wunschlieferdatum</label
+                                ><br />
+                                <input
+                                    type="date"
+                                    name="delivery_date2"
+                                    id="delivery_date2"
+                                />
+                            </div>
+
+                            <div class="row">
+                                <label for="message">Nachricht:</label><br />
+                                <textarea
+                                    name="message"
+                                    id="message"
+                                    cols="30"
+                                    rows="10"
+                                    placeholder="Geben Sie bitte die gewünschten Produkte und eventuell für uns wichtige Notizen ein, die uns bei der Vorbereitung Ihrer Bestellung hilfreich sein kann."
+                                ></textarea>
+                            </div>
+
+                            <div class="row">
+                                <input
+                                    type="checkbox"
+                                    name="gdpr"
+                                    id="gdpr"
+                                    required
+                                />
+                                <label for="gdpr"
+                                    >Ja, ich bin mit den
+                                    <a href="datenschutz.html" target="_blank"
+                                        >Datenschutzbestimmungen</a
+                                    >
+                                    einverstanden.</label
+                                >
+                            </div>
+
+                            <div class="row">
+                                <label for="feedback"
+                                    >Wie haben Sie von uns erfahren?</label
+                                ><br />
+                                <select name="feedback" id="feedback">
+                                    <option value="" disabled selected>
+                                        Bitte wählen Sie eine Option
+                                    </option>
+                                    <option value="Google">Google</option>
+                                    <option value="Friend">
+                                        Durch einen Freund
+                                    </option>
+                                    <option value="Magazine">
+                                        Aus einer Zeitung
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="row">
+                                <input
+                                    type="submit"
+                                    value="Bestellung abschicken"
+                                />
+                            </div>
+                        </form>
+                        <address>
+                            Bakery GmbH<br />
+                            Salzburgerstraße 55<br />
+                            5620 Schwarzach
+                        </address>
+                    </div>
+                </section>
+            </main>
+
+            <footer id="main-footer">
+                <div class="inner-wrapper">
+                    <address>
+                        <span>Bakery GmbH</span>
+                        <span>Salzburgerstraße 55</span>
+                        <span>5620 Schwarzach</span>
+                        <span>Österreich</span>
+                        <br />
+                        <span>Tel. +43 6415 422 42 80</span>
+                        <span>E-Mail: bakery@example.com</span>
+                    </address>
+
+                    <nav>
+                        <ul>
+                            <li><a href="#">Über Unser</a></li>
+                            <li><a href="team.html">Unser Team</a></li>
+                            <li><a href="galerie.html">Galerie</a></li>
+                            <li><a href="kontakt.html">Kontakt</a></li>
+                            <li><a href="impressum.html">Impressum</a></li>
+                            <li>
+                                <a href="datenschutz.html"
+                                    >Datenschutz &amp; Cookies</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="end">
+                    <p>&copy; 2023 by JWE Wifi Salzburg</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

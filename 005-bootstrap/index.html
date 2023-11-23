@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bootstrap Intro</title>
+        <link
+            rel="stylesheet"
+            href="bootstrap-5.3.2-dist/css/bootstrap.min.css"
+        />
+        <style>
+            body {
+                color: white;
+                background: rgb(2, 0, 36);
+                background: linear-gradient(
+                    90deg,
+                    rgba(2, 0, 36, 1) 0%,
+                    rgba(61, 123, 144, 1) 56%,
+                    rgba(0, 212, 255, 1) 100%
+                );
+            }
+        </style>
+    </head>
+    <body>
+        <header class="container bg-primary g-0">
+            <div class="row">
+                <div class="col">
+                    <nav
+                        class="navbar navbar-expand-lg navbar-dark bg-dark px-0 py-3"
+                    >
+                        <div class="container-xl text-end">
+                            <!-- Logo -->
+                            <a class="navbar-brand text-start" href="#">
+                                <img
+                                    src="../004-bakery/img/Logo-placeholder.png"
+                                    class="w-50"
+                                    alt="..."
+                                />
+                            </a>
+                            <!-- Navbar toggle -->
+                            <button
+                                class="navbar-toggler"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#navbarCollapse"
+                                aria-controls="navbarCollapse"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation"
+                            >
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <!-- Collapse -->
+                            <div
+                                class="collapse navbar-collapse"
+                                id="navbarCollapse"
+                            >
+                                <!-- Nav -->
+                                <div class="navbar-nav mx-lg-auto">
+                                    <a
+                                        class="nav-item nav-link active"
+                                        href="#"
+                                        aria-current="page"
+                                        >Home</a
+                                    >
+                                    <a class="nav-item nav-link" href="#"
+                                        >Product</a
+                                    >
+                                    <a class="nav-item nav-link" href="#"
+                                        >Features</a
+                                    >
+                                    <a class="nav-item nav-link" href="#"
+                                        >Pricing</a
+                                    >
+                                </div>
+                                <!-- Right navigation -->
+                                <div class="navbar-nav ms-lg-4">
+                                    <a class="nav-item nav-link" href="#"
+                                        >Sign in</a
+                                    >
+                                </div>
+                                <!-- Action -->
+                                <div
+                                    class="d-flex align-items-lg-center mt-3 mt-lg-0"
+                                >
+                                    <a
+                                        href="#"
+                                        class="btn btn-sm btn-primary w-full w-lg-auto"
+                                    >
+                                        Register
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="row gx-0">
+                <div class="col">
+                    <img
+                        src="../004-bakery/img/content/pexels-hasan-berkant-12259559_w1920.jpg"
+                        alt=""
+                        class="img-fluid"
+                    />
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="row g-0">
+                <div class="col-sm-6 col-md-3 bg-secondary">1</div>
+                <div class="col-sm-6 col-md-3 bg-warning">1</div>
+                <div class="col-sm-6 col-md-3 bg-danger">1</div>
+                <div class="col-sm-6 col-md-3 bg-info">1</div>
+            </div>
+        </main>
+
+        <footer class="container bg-primary" style="height: 300px">
+            <div class="row justify-content-center align-items-center">
+                <div class="col">###left###</div>
+                <div class="col text-end">###right###</div>
+            </div>
+        </footer>
+
+        <script src="bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
