@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grid Areas</title>
+
+        <style>
+            img {
+                max-width: 100%;
+            }
+            .container {
+                display: grid;
+                grid-template-columns: 1fr minmax(320px, 1200px) 1fr;
+                grid-template-rows: 400px 2.2fr 100px;
+                gap: 0px 0px;
+                grid-auto-flow: row;
+            }
+
+            .inner {
+                grid-area: 1 / 2 / 4 / 3;
+            }
+
+            .header {
+                grid-area: 1 / 2 / 2 / 3;
+            }
+
+            .header img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .main {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                gap: 0px 0px;
+                grid-auto-flow: row;
+                grid-template-areas:
+                    "content content ads"
+                    "content content ads"
+                    "content content ads";
+                grid-area: 2 / 2 / 3 / 3;
+            }
+
+            .content {
+                grid-area: content;
+            }
+
+            .ads {
+                grid-area: ads;
+            }
+
+            .footer {
+                grid-area: 3 / 2 / 4 / 3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="inner"></div>
+            <div class="header">
+                <img src="../003-blog/img/blog-banner@2x.png" alt="" />
+            </div>
+            <div class="main">
+                <div class="content">
+                    <section>
+                        <header>
+                            <h2>Testheader</h2>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Voluptatem corrupti mollitia
+                                ullam quod saepe, accusantium dolorem, ipsum
+                                dicta maxime eaque enim ex sed molestiae
+                                deleniti cum fuga dolores. Perspiciatis, aut?
+                            </p>
+                            <button>Testbutton</button>
+                        </header>
+                    </section>
+                </div>
+                <div class="ads">###ADS###</div>
+            </div>
+            <div class="footer">###FOOTER###</div>
+        </div>
+    </body>
+</html>
