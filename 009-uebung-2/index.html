@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Insta-like Profile Page</title>
+        <style>
+            :root {
+                --space: 30px;
+            }
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+            }
+
+            html * {
+                box-sizing: border-box;
+            }
+
+            img {
+                max-width: 100%;
+            }
+
+            #profile {
+                margin-top: 200px;
+                background-color: #7c4e4e;
+                padding-top: calc(142px / 2);
+                /* den Inhalt um die halbe Höhe des #prodile-image nach unten schieben */
+                position: relative;
+            }
+
+            #profile-image {
+                display: block;
+                width: 142px;
+                height: 142px;
+                border: 6px solid white;
+                position: absolute;
+                left: var(--space);
+                top: calc(
+                    -142px / 2
+                ); /* um die halbe Höhe nach oben schieben */
+                border-radius: 50%;
+            }
+
+            #username {
+                font-weight: bold;
+                color: white;
+                padding: var(--space);
+            }
+
+            #postings {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: auto;
+            }
+
+            #postings > img {
+                width: 100%; /* 100% der einzelnen grid-Spalte, nicht die gesamte div-Breite */
+                height: 33vw;
+                object-fit: cover;
+                border: 0px solid black;
+                object-position: center;
+                transition: all 0.5s ease;
+            }
+
+            .inner-wrapper {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 1200px;
+            }
+
+            @media (min-width: 1200px) {
+                #profile-image {
+                    left: 10%;
+                    transform: scale(1.25);
+                }
+                #username {
+                    padding-left: 10%;
+                }
+                #postings > img {
+                    height: calc(1200px / 3);
+                }
+
+                #postings > img:hover {
+                    opacity: 0.6;
+                    border: 5vw solid black;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="inner-wrapper">
+            <div id="profile">
+                <img
+                    src="pexels-andrea-piacquadio-733872.jpg"
+                    alt=""
+                    id="profile-image"
+                />
+
+                <div id="username">Sarah James</div>
+
+                <div id="postings">
+                    <img src="pexels-fábio-scaletta-2806202.jpg" alt="" />
+                    <img src="pexels-josh-hild-2422257.jpg" alt="" />
+                    <img src="pexels-paul-kerby-genil-3090137.jpg" alt="" />
+                    <img src="pexels-vinícius-estevão-1872090.jpg" alt="" />
+
+                    <img src="pexels-fábio-scaletta-2806202.jpg" alt="" />
+                    <img src="pexels-josh-hild-2422257.jpg" alt="" />
+                    <img src="pexels-paul-kerby-genil-3090137.jpg" alt="" />
+                    <img src="pexels-vinícius-estevão-1872090.jpg" alt="" />
+
+                    <img src="pexels-fábio-scaletta-2806202.jpg" alt="" />
+                    <img src="pexels-josh-hild-2422257.jpg" alt="" />
+                    <img src="pexels-paul-kerby-genil-3090137.jpg" alt="" />
+                    <img src="pexels-vinícius-estevão-1872090.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
