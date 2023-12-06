@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Discover</title>
+
+        <style>
+            :root {
+                --green: #123441;
+                --yellow: #ffd43e;
+            }
+
+            @font-face {
+                font-family: "Open Sans";
+                src: url(fonts/OpenSans-Regular.ttf);
+            }
+
+            @font-face {
+                font-family: "Open Sans";
+                src: url(fonts/OpenSans-Bold.ttf);
+                font-weight: bold;
+            }
+            html * {
+                box-sizing: border-box;
+            }
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: "Open Sans";
+            }
+
+            #main-footer {
+                border-top: 9px;
+                background: var(--green);
+                color: white;
+                text-align: center;
+                padding: 0;
+            }
+
+            .inner-wrapper {
+                margin: 0 auto;
+                max-width: 1024px;
+                background: orange;
+            }
+
+            #main-footer a {
+                color: white;
+                text-decoration: none;
+            }
+
+            #main-footer nav {
+                background: red;
+            }
+
+            #newsletter-subscription {
+                background: brown;
+            }
+
+            @media (min-width: 1024px) {
+                #main-footer {
+                    text-align: left;
+                }
+                #main-footer .flexbox {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .flexbox .right {
+                    text-align: right;
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                }
+
+                .flexbox .left {
+                    flex: 1;
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: space-between;
+                }
+
+                #footer-logo {
+                    height: 66px;
+                }
+
+                #copyright {
+                    flex: 1;
+                    display: flex;
+                    align-items: flex-end;
+                    background: silver;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header></header>
+            <main></main>
+            <footer id="main-footer">
+                <div class="inner-wrapper">
+                    <div class="flexbox">
+                        <div class="left">
+                            <div id="newsletter-subscription">
+                                <h2>Für den Newsletter anmelden</h2>
+                                ###FORM###
+                            </div>
+                            <nav>###NAV###</nav>
+                        </div>
+                        <div class="right">
+                            <img
+                                id="footer-logo"
+                                src="img/footer-logo.svg"
+                                alt=""
+                            />
+                            <div id="copyright">
+                                COPYRIGHT 2023 BY JWE DEVELOPERS. ALL RIGHTS
+                                RESERVED.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
