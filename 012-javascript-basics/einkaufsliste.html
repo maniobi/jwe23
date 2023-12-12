@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JavaScript Einkaufsliste</title>
+        <link
+            rel="stylesheet"
+            href="../vendor/bootstrap-5.3.2-dist/css/bootstrap.css"
+        />
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>Einkaufsliste</h1>
+            </header>
+
+            <main>
+                <input
+                    type="text"
+                    name="newElement"
+                    id="newElement"
+                    class="form-control"
+                />
+                <button class="btn btn-primary" onclick="addNewElement()">
+                    +
+                </button>
+
+                <div id="myList">
+                    <textarea
+                        name="myListOutput"
+                        id="myListOutput"
+                        cols="30"
+                        rows="10"
+                    ></textarea>
+                </div>
+            </main>
+        </div>
+
+        <!-- Vendor Code: Drittanbieter JavaScript -->
+        <script src="../vendor/bootstrap-5.3.2-dist/js/bootstrap.js"></script>
+        <!-- mein JavaScript -->
+        <script src="js/einkaufsliste.js"></script>
+    </body>
+</html>

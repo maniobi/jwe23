@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JavaScript Basics</title>
+
+        <script>
+            document.write("hi!");
+        </script>
+
+        <script src="js/basics.js"></script>
+    </head>
+    <body>
+        <!-- javascript dynamisches HTML -->
+
+        <h1>JavaScript Basics <span>123!</span></h1>
+
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
+            consectetur, totam quisquam aliquam praesentium, quia temporibus
+            officiis deserunt tempore neque placeat veniam aut et odit facere,
+            fugiat maiores aspernatur dignissimos?
+        </p>
+
+        <button onclick="showMyListInConsole()">
+            Zeige meine Einkaufsliste in der Console
+        </button>
+
+        <script>
+            // lesen aus dem HTML Dokument
+            let textFromH1 = document.querySelector("h1").innerText;
+        </script>
+    </body>
+</html>
