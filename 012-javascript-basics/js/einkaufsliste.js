@@ -12,6 +12,7 @@ let addNewElement = function () {
     getAllElementsFromList();
 };
 
+
 let getAllElementsFromList = function () {
     let htmlOutput = "";
 
@@ -19,5 +20,6 @@ let getAllElementsFromList = function () {
     myList.forEach((element) => {
         htmlOutput += element + "<br>";
     });
+
     document.querySelector("#myListOutput").innerHTML = htmlOutput;
 };

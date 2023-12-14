@@ -1,0 +1,58 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: skyblue;
+}
+
+html * {
+    box-sizing: border-box;
+}
+
+#ground {
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgb(87, 64, 64);
+}
+
+#building {
+    position: absolute;
+    bottom: 10%;
+    left: 30%;
+    width: 60%;
+    height: 80%;
+    background: grey;
+}
+
+#elevator {
+    --floor: 0;
+    width: calc(100% / 5);
+    height: calc(100% / 5);
+    background: green;
+    border: 3px solid lightgray;
+    position: absolute;
+    bottom: calc(100% / 5 * var(--floor));
+    transition: all 3s ease-in-out;
+}
+
+.floor-3 {
+    --floor: 4 !important;
+}
+.floor-2 {
+    --floor: 3 !important;
+}
+.floor-1 {
+    --floor: 2 !important;
+}
+.floor-0 {
+    --floor: 1 !important;
+}
+.floor-ug {
+    --floor: 0 !important;
+}
