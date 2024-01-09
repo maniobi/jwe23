@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gallery in JavaScript dynamically generated</title>
+        <link rel="stylesheet" href="../vendor/fancybox/fancybox.css" />
+    </head>
+    <body>
+        <!-- 
+
+            Bilder liegen unter:
+
+            Volle Auflösung:        img/full/x.jpg
+            Thumbnail/Minaturbild:  img/thumb/x.jpg 
+
+         -->
+
+        <div id="gallery">
+            <a href="img/full/1.jpg" data-fancybox="gallery">
+                <img src="img/thumbs/1.jpg" />
+            </a>
+            <a href="img/full/1.jpg" data-fancybox="gallery">
+                <img src="img/thumbs/1.jpg" />
+            </a>
+            <a href="img/full/1.jpg" data-fancybox="gallery">
+                <img src="img/thumbs/1.jpg" />
+            </a>
+            <a href="img/full/1.jpg" data-fancybox="gallery">
+                <img src="img/thumbs/1.jpg" />
+            </a>
+            <a href="img/full/1.jpg" data-fancybox="gallery">
+                <img src="img/thumbs/1.jpg" />
+            </a>
+        </div>
+
+        <script src="../vendor/fancybox/fancybox.umd.js"></script>
+        <script>
+            Fancybox.bind("[data-fancybox]", {
+                // Your custom options
+            });
+        </script>
+    </body>
+</html>
