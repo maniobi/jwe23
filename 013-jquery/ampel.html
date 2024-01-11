@@ -1,31 +1,29 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>jQuery</title>
+        <title>Ampel</title>
+        <link
+            rel="stylesheet"
+            href="../vendor/bootstrap-5.3.2-dist/css/bootstrap.css"
+        />
     </head>
     <body>
-        <div id="meineId"></div>
-
         <div class="wrapper">
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <ul>
-                            <li>Zeile 1</li>
-                            <li>Zeile 2</li>
-                            <li>Zeile 3</li>
-                            <li>Zeile 4</li>
-                            <li>Zeile 5</li>
-                        </ul>
+                        <small>0 = rot, 1 = gelb, 2 = grün</small>
+
+                        <div id="ampel"></div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <script src="../vendor/bootstrap-5.3.2-dist/js/bootstrap.js"></script>
         <script src="../vendor/jquery-3.7.1.min.js"></script>
-
-        <script src="js/jquery-basics.js"></script>
+        <script src="js/ampel.js"></script>
     </body>
 </html>

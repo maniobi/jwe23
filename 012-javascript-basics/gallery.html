@@ -17,21 +17,7 @@
          -->
 
         <div id="gallery">
-            <a href="img/full/1.jpg" data-fancybox="gallery">
-                <img src="img/thumbs/1.jpg" />
-            </a>
-            <a href="img/full/1.jpg" data-fancybox="gallery">
-                <img src="img/thumbs/1.jpg" />
-            </a>
-            <a href="img/full/1.jpg" data-fancybox="gallery">
-                <img src="img/thumbs/1.jpg" />
-            </a>
-            <a href="img/full/1.jpg" data-fancybox="gallery">
-                <img src="img/thumbs/1.jpg" />
-            </a>
-            <a href="img/full/1.jpg" data-fancybox="gallery">
-                <img src="img/thumbs/1.jpg" />
-            </a>
+            <!-- hier kommt das dynamisch generierte HTML -->
         </div>
 
         <script src="../vendor/fancybox/fancybox.umd.js"></script>
@@ -39,6 +25,32 @@
             Fancybox.bind("[data-fancybox]", {
                 // Your custom options
             });
+
+            let galleryImages = ["1", "2", "3", "4"];
+
+            let createDynamicGallery = function () {
+                let htmlOutput = "";
+
+                for (let img = 1; img <= galleryImages.length; img++) {
+                    htmlOutput += `
+                        <a href="img/full/${img}.jpg" data-fancybox="gallery">
+                            <img src="img/thumbs/${img}.jpg" alt="" />
+                        </a>
+                    `;
+                }
+
+                galleryImages.forEach(function (img) {
+                    htmlOutput += `
+                        <a href="img/full/${img}.jpg" data-fancybox="gallery">
+                            <img src="img/thumbs/${img}.jpg" alt="" />
+                        </a>
+                    `;
+                });
+
+                document.querySelector("#gallery").innerHTML = htmlOutput;
+            };
+
+            createDynamicGallery();
         </script>
     </body>
 </html>
