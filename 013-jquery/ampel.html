@@ -8,15 +8,72 @@
             rel="stylesheet"
             href="../vendor/bootstrap-5.3.2-dist/css/bootstrap.css"
         />
-    </head>
+        <style>
+            html * {
+                box-sizing: border-box;
+            }
+            #ampel {
+                position: relative;
+                width: 120px;
+                height: 300px;
+                background: black;
+                display: flex;
+                flex-flow: column;
+                gap: 10px;
+                padding: 20px;
+                border-radius: 10px;
+            }
+            #ampel::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%) translateY(100%);
+                display: block;
+                background: silver;
+                height: 400px;
+                width: 20px;
+            }
+
+            #ampel > div {
+                border-radius: 50%;
+                border: 1px solid grey;
+                flex: 1;
+                box-shadow: inset 0 0 20px 0px black;
+                transition: all 0.2s ease-out;
+            }
+
+            .state-0 > .red {
+                background: red;
+            }
+            .state-1 > .yellow {
+                background: rgb(255, 196, 0);
+            }
+
+            .state-01 > .red {
+                background: red;
+            }
+            .state-01 > .yellow {
+                background: rgb(255, 196, 0);
+            }
+
+            .state-2 > .green {
+                background: rgb(2, 253, 2);
+            }
+        </style>
+    </head> 
     <body>
         <div class="wrapper">
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <small>0 = rot, 1 = gelb, 2 = grün</small>
-
-                        <div id="ampel"></div>
+                        <h1>Ampel in JavaScript</h1>
+                        <p>&nbsp;</p>
+                        <div id="ampel" class="state-2">
+                            <div class="red"></div>
+                            <div class="yellow"></div>
+                            <div class="green"></div>
+                        </div>
                     </div>
                 </div>
             </div>

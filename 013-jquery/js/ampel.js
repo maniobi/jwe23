@@ -12,7 +12,7 @@ const settings = {
     },
 };
 // Start-Wert (state) in das DIV eintragen
-$("#ampel").text(settings.state);
+$("#ampel").attr("state-" + settings.state);
 
 const fromGreenToRed = function () {
     window.setTimeout(function () {
@@ -39,7 +39,8 @@ const fromRedToGreen = function () {
 };
 
 window.setInterval(function () {
-    $("#ampel").text(settings.state);
+    // document.querySelector('#ampel').setAttribute('class', "state-" + settings.state)
+    $("#ampel").attr("class", "state-" + settings.state);
 }, 1000);
 
 fromGreenToRed();
