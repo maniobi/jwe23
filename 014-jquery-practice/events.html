@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Events</title>
+
+        <style>
+            html,
+            body {
+                height: 100%;
+                margin: 0;
+            }
+
+            #circle {
+                border: 5px solid black;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                transform: translateX(-50%) translateY(-50%);
+                position: absolute;
+                top: 0;
+                left: 0;
+                /* prevent click events and selections (clicking through the circle) */
+                user-select: none;
+                pointer-events: none;
+
+                mix-blend-mode: difference;
+                z-index: 10000;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="circle"></div>
+
+        <button id="myButton">Click me!</button>
+        <div>
+            <a href="https://www.google.com" target="_blank">Link zu Google</a>
+        </div>
+
+        <div>
+            Datum:<br />
+            <input type="date" name="cal" id="cal" />
+        </div>
+
+        <script src="../vendor/jquery-3.7.1.min.js"></script>
+
+        <script>
+            // Event Handler setzen
+            $("#myButton").on("click", function () {
+                console.log("hey! you clicked me");
+            });
+
+            // Event handler entfernen
+            $("#myButton").off("click");
+
+            $("a").click(function (e) {
+                e.preventDefault();
+                alert("dieser Link wird von JavaScript blockiert");
+            });
+
+            // unterbinden von typischen Events
+            // e.preventDefault()
+
+            $("#myButton").mouseenter(function () {
+                $(this).css("border", "4px solid red");
+            });
+
+            $("#myButton").mouseleave(function () {
+                $(this).css("border", "4px solid green");
+            });
+
+            $("body").mousemove(function (e) {
+                // console.log(e.pageX, e.pageY);
+                $("#circle").css({
+                    top: e.pageY,
+                    left: e.pageX,
+                });
+            });
+
+            // Change Event for Form elements
+            $("#cal").change(function (e) {
+                console.log(new Date($(this).val()));
+            });
+        </script>
+    </body>
+</html>

@@ -77,6 +77,17 @@ const createProductList = function () {
 };
 createProductList();
 
+const setCheckedListItems = function () {
+    const cookie = Cookies.get("checked_items");
+    if (typeof cookie != "undefined" && cookie != "") {
+        let checkedItems = cookie.split(",");
+        $(checkedItems).each(function (index, value) {
+            $("#product-" + value).prop("checked", true);
+        });
+    }
+};
+setCheckedListItems();
+
 const showFilteredList = function (list) {
     $("#product-list").empty();
 
@@ -96,16 +107,25 @@ const filterList = function () {
 $("#new-product").on("keyup", filterList);
 $("#add-product").on("click", filterList);
 
-$("input.form-check-input").on("click", function () {
-    let checkbox = $(this);
-    console.log(checkbox.prop("checked"));
+// lesen der aktuell gechecked inputs
+// bauen des Arrays mit der Liste aller product-ids der Elemente die gecheckt sind
+// Speichern in Cookie
+$("#product-list input").change(function () {
+    let listOfCheckedInputs = [];
 
-    if (checkbox.prop("checked") == true) {
-        // speichere in array
-    }
+    let checkedInputs = $("input:checked");
+    checkedInputs.each(function () {
+        let productId = $(this).closest("[data-product-id]").data("product-id");
+        // console.log(productId);
+        listOfCheckedInputs.push(productId);
+        console.log(listOfCheckedInputs);
+    });
+
+    Cookies.set("checked_items", listOfCheckedInputs.join(","), {
+        expires: 365,
+    });
 });
 
-let boughtProducts = [false, false, false, false];
-
-
-
+// Cookie auslesen
+// Array mit Schleife durchgehen
+// Listenelemente .prop() aktualisieren

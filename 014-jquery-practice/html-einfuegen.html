@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTML einfügen, ändern und entfernen</title>
+    </head>
+    <body>
+        <h2>headline1</h2>
+
+        <div class="wrapper">
+            <!-- dynamic HTML goes here -->
+        </div>
+
+        <div id="gallery"></div>
+
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+            autem tenetur similique delectus alias rerum rem unde saepe vero ut
+            natus FUCK dolores, dicta, ducimus aut debitis magnam culpa. Totam,
+            deleniti.
+        </div>
+
+        <script src="../vendor/jquery-3.7.1.min.js"></script>
+
+        <script>
+            // Elemente einfügen
+            $(".wrapper").append(`<p class="greeting1">Hy, I'm dynamic!</p>`);
+            $(
+                `<p class="greeting2">Servus, ich bin aus Österreich</p>`
+            ).appendTo(".wrapper");
+            $(".wrapper").prepend(
+                `<div class="example-before">Element before other Elements</div>`
+            );
+
+            // Elemente ändern
+            $(".greeting1").attr("id", "dynamic-1");
+            $(".greeting1").attr("id", "dynamic-2");
+            $(".greeting1").removeAttr("id");
+            $(".greeting1").attr("id", "dynamic-1");
+
+            // CSS Anpassen
+            $(".greeting2").css("background-color", "pink");
+            $(".greeting2").css({
+                "font-weight": "bold",
+                border: "2px dashed green",
+            });
+            $(".example-before").css("background", "lightgreen");
+
+            // Classes hinzufügen/entfernen
+            $("body")
+                .addClass("js-works")
+                .addClass("btn btn-primary extra-class-dynamic")
+                .removeClass("temporary-class");
+
+            $(".greeting2").text(
+                $(".greeting2").text() + " // Wow, that changes everything!"
+            );
+            $(".greeting1").html(`<i>Wow, </i> that's awesome!`);
+
+            // Umschließen von Elementen
+            for (let i = 0; i < 10; i++) {
+                $("#gallery").append(
+                    '<img src="https://placehold.co/600x400">'
+                );
+            }
+            $("#gallery img").wrap('<a href="#"></a>');
+
+            $("#gallery img").each(function (index, img) {
+                $(img).wrap('<a href="#"></a>');
+            });
+
+            // Mehrere Elemente selektieren und ändern
+            $("#gallery img").css("border", "3px solid orange");
+
+            // Elemente ersetzen
+            $("div.content:contains('FUCK')").replaceWith(
+                "<p>Contains bad words.</p>"
+            );
+
+            // Kopieren von Elementen
+            $("h2").clone().prependTo("#gallery");
+
+            // Elemente entfernen
+            $("#gallery img").last().remove();
+        </script>
+    </body>
+</html>
