@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>String zusammenbauen</title>
+    </head>
+    <body>
+        <div id="output"></div>
+
+        <script src="../vendor/jquery-3.7.1.min.js"></script>
+        <script>
+            let person = {
+                firstname: "Manuel",
+                lastname: "Obermoser",
+            };
+            let firstnameVar = "Manuel";
+
+            $("#output").text("Herzlich Willkommen " + person.firstname);
+
+            $("#output").text(`
+                Herzlich Willkommen ${person.firstname} ${person.lastname} !
+            `);
+        </script>
+    </body>
+</html>

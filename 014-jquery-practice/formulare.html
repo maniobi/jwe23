@@ -81,6 +81,27 @@
         <script src="../vendor/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
         <script src="../vendor/jquery-3.7.1.min.js"></script>
 
-        <script></script>
+        <script>
+            let updateTotal = function () {
+                let total = 0;
+
+                $(".product").each(function () {
+                    let price = parseFloat($(this).attr("price"));
+                    let quantity = parseInt($(this).val());
+
+                    if (!isNaN(quantity)) {
+                        // es muss eine nummer sein um eine Berechnung durchführen zu können
+                        total += price * quantity;
+                    }
+                });
+
+                // ausgabe als 19.90 anstatt 19.9 (2 Nachkommastellen)
+                $("#total").val(total.toFixed(2));
+            };
+
+            $(".product").on("input", function () {
+                updateTotal();
+            });
+        </script>
     </body>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>API mit jQuery nutzen</title>
+    </head>
+    <body>
+        <div id="ajaxContent"></div>
+
+        <script src="../vendor/jquery-3.7.1.min.js"></script>
+
+        <script>
+            let getGallery = function () {
+                $.get(
+                    "https://phet-dev.colorado.edu/html/build-an-atom/0.0.0-3/simple-text-only-test-page.html",
+                    function (data) {
+                        console.log(data);
+                        $("#ajaxContent").html(data);
+                    }
+                );
+            };
+        </script>
+    </body>
+</html>

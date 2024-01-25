@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JSON API</title>
+    </head>
+    <body>
+        <div id="gallery">
+            <!-- Data from JSON API -->
+        </div>
+
+        <button id="load">Galerie nachladen</button>
+
+        <script src="../vendor/jquery-3.7.1.min.js"></script>
+        <script>
+            const url = "https://jsonplaceholder.typicode.com/photos";
+
+            let getGalleryFromAPI = function () {
+                $.getJSON(url, function (data) {
+                    let htmlOut = "";
+                    $(data).each(function (index, entry) {
+                        if (index > 0 && index < 100) {
+                            htmlOut += `<img src="${entry.thumbnailUrl}" alt="" />`;
+                        }
+
+                        // Shorthand schreibweise für eine Condition
+                        // WENN BEDINGUNG true ? DANN CODE : ANSONSTEN CODE
+                        index == 5
+                            ? console.log("index is 5")
+                            : console.log("index is not 5");
+                    });
+
+                    $("#gallery").html(htmlOut);
+                });
+            };
+
+            $("#load").on("click", function () {
+                getGalleryFromAPI();
+            });
+        </script>
+    </body>
+</html>
