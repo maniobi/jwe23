@@ -1,16 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulare</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Formulare</title>
+        <link
+            rel="stylesheet"
+            href="../vendor/bootstrap-5.3.2-dist/css/bootstrap.min.css"
+        />
+    </head>
+    <body>
+        <div class="container mt-5">
+            <h2>Bäckerei Bestellformular</h2>
+            <form id="orderForm">
+                <div class="row mb-3 align-items-center">
+                    <label for="product1" class="col col-form-label"
+                        >Produkt 1 (Brot - 3.50€):</label
+                    >
+                    <div class="col-sm-3">
+                        <input
+                            type="number"
+                            id="product1"
+                            class="form-control product"
+                            price="3.50"
+                            min="0"
+                        />
+                    </div>
+                </div>
+                <div class="row mb-3 align-items-center">
+                    <label for="product2" class="col col-form-label"
+                        >Produkt 2 (Kuchen - 4.50€):</label
+                    >
+                    <div class="col-sm-3">
+                        <input
+                            type="number"
+                            id="product2"
+                            class="form-control product"
+                            price="4.50"
+                            min="0"
+                        />
+                    </div>
+                </div>
+                <div class="row mb-3 align-items-center">
+                    <label for="product3" class="col col-form-label"
+                        >Produkt 3 (Donuts - 2.00€):</label
+                    >
+                    <div class="col-sm-3">
+                        <input
+                            type="number"
+                            id="product3"
+                            class="form-control product"
+                            price="2.00"
+                            min="0"
+                        />
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="total" class="col col-form-label"
+                        >Gesamtsumme:</label
+                    >
+                    <div class="col-sm-3">
+                        <input
+                            type="text"
+                            id="total"
+                            class="form-control"
+                            readonly
+                        />
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col text-end">
+                        <button type="submit" class="btn btn-primary">
+                            Bestellen
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
 
-    <form action="">
-        <input type="text" name="username" id="username">
-        
-    </form>
-    
-</body>
+        <script src="../vendor/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+        <script src="../vendor/jquery-3.7.1.min.js"></script>
+
+        <script></script>
+    </body>
 </html>
