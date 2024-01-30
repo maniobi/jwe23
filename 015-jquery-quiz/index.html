@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>jQuery Quiz</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <style>
+            button.answer-btn {
+                background-color: transparent;
+                border-radius: 0;
+                border: 1px solid transparent;
+            }
+            button.answer-btn:hover:not([disabled]) {
+                border: 1px solid grey;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="question"></div>
+
+        <div id="answers"></div>
+
+        <div id="result"></div>
+
+        <script src="../vendor/jquery-3.7.1.min.js"></script>
+        <script src="js/quiz.js"></script>
+    </body>
+</html>
